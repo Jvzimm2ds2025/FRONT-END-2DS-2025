@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form javascript</title>
+    <link rel="stylesheet" href="aula12.css">
+</head>
+<body>
+    
+    <div class="form-container">
+        <h2>Adicionar Dados</h2>
+        <input type="text" id="campo1" placeholder="Campo1 (ex:Nome)">
+        <input type="text" id="campo1" placeholder="Campo1 (ex:Email)">
+        <input type="text" id="campo1" placeholder="Campo1 (ex:Idade)">
+        <button onclick="adicionarlinha()">Adicionar a tabela </button>
+    </div>
+
+    <table id="tabeladados">
+        <thead>
+            <tr>
+                      <th>Nome</th>
+                      <th>Email</th>
+                      <th>Idade</th>
+            </tr>
+        </thead>
+         <tbody>
+                 <tr>
+                    <td>Joao</td>
+                    <td>joao@email</td>
+                    <td>16</td>
+                 </tr>
+         </tbody>
+    </table>
+
+
+</body>
+<script>
+
+    function adicionarlinha() {
+       //CAPTURANDO OS VALORES DOS CAMPOS HTML
+        const valor1 = document.getElementById("campo1").value.trim();
+        const valor2 = document.getElementById("campo2").value.trim();
+        const valor3 = document.getElementById("campo2").value.trim();
+
+        //VERIFICANDO SE TODOS OS CAMPOS ESTAO PREENCHIDOS 
+        if(valor1 === ''|| valor2 === ''|| valor3 === ''){
+            alert("por favor,preencha todos os campos!")
+        }
+    }
+
+</script>
+
+
+</html>
